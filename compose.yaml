@@ -1,0 +1,21 @@
+services:
+  ru:
+    image: kirov/translate
+    build:
+      context: .
+    restart: unless-stopped
+    environment:
+      SOURCE_LANGUAGE: ru
+    env_file:
+      - .env
+
+  sr:
+    image: kirov/translate
+    build:
+      context: .
+    restart: unless-stopped
+    environment:
+      SOURCE_LANGUAGE: sr
+    env_file:
+      - .env
+
